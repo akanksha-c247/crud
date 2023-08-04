@@ -28,10 +28,8 @@ export const Create = () => {
       debugger;
       const data = await response.json();
       console.log("New post created:", data);
-      // localStorage.getItem("newPostData", JSON.stringify(data));
-      // localStorage.setItem("newPostData", JSON.stringify(data));
-      const newData = existingData ? [...existingData, data] : [data];
-      localStorage.setItem("newPostData", JSON.stringify(newData));
+      // const newData = existingData ? [...existingData, data] : [data];
+      // localStorage.setItem("newPostData", JSON.stringify(newData));
       history("/", { state: { newData: data } });
     } catch (error) {
       console.error("Error creating post:", error);

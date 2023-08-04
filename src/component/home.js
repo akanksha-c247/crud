@@ -75,7 +75,6 @@ export const Home = () => {
       <table className="posts-table">
         <thead>
           <tr>
-            <th>User ID</th>
             <th>ID</th>
             <th>Title</th>
             <th>Body</th><th>Edit</th><th>Delete</th>
@@ -84,7 +83,6 @@ export const Home = () => {
         <tbody>
           {posts.map((post, index) => (
             <tr key={post.id}>
-              <td>{post.userId}</td>
               <td>{post.id}</td>
               <td>{post.title}</td><td>{post.body}</td>
               <td>
